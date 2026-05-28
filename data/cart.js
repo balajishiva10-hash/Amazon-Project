@@ -37,7 +37,7 @@ export function addToCart(productId) {
   );
   // console.log(quantitySelector.value);
 
-  const quantity = Number(quantitySelector.value);
+  const quantity = quantitySelector ? Number(quantitySelector.value) : 1;
 
   if (matchingItem) {
     matchingItem.quantity += quantity;
